@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VegasBett</title>
+  <link rel="icon" href="logo.png" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #2a0050, #4b007d);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 30px 20px 10px;
+    }
+
+    header img {
+      max-width: 200px;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: gold;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 500px;
+      margin: 15px auto;
+    }
+
+    .botones {
+      margin: 30px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 80%;
+      max-width: 400px;
+    }
+
+    .botones a {
+      display: block;
+      padding: 15px;
+      border-radius: 12px;
+      background-color: gold;
+      color: #2a0050;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: transform 0.2s ease;
+    }
+
+    .botones a:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 20px 10px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+
+    .verificado {
+      color: #00ff88;
+      margin-top: 5px;
+      font-size: 0.95em;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 2.5em;
+      }
+    }
+  </style>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1043093627803279');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1043093627803279&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="VegasBett Logo" />
+  </header>
+
+  <main>
+    <h1>Bienvenido a VegasBett</h1>
+    <p>Obtené tu <strong>bono del 35%</strong> en tu primera carga.<br>¡Y que la suerte esté de tu lado! 🎲✨</p>
+
+    <div class="botones">
+      <a href="https://wa.me/5492235931148?text=Hola,%20quiero%20mi%20BONO" onclick="fbq('trackCustom', 'ClickBono')">
+        💰 Quiero mi bono
+      </a>
+      <a href="https://wa.me/5492235931148?text=Quiero%20más%20info" onclick="fbq('trackCustom', 'ClickInfo')">
+        ℹ️ Quiero más info
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    Todos los derechos reservados Spark Publicidad<br />
+    <div class="verificado">✅ Verificado por WhatsApp</div>
+  </footer>
+
+</body>
+</html>
