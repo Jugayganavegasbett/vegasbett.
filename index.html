@@ -5,133 +5,81 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>VegasBett</title>
-  <link rel="icon" href="logo.png" />
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #2a0050, #4b007d);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      font-family: sans-serif;
+      background-color: #37004b;
+      color: white;
       text-align: center;
-      min-height: 100vh;
+      padding: 2rem;
     }
-
-    header {
-      padding: 30px 20px 10px;
+    img {
+      max-width: 250px;
     }
-
-    header img {
-      max-width: 200px;
-    }
-
     h1 {
-      font-size: 2em;
-      color: gold;
-      margin-top: 20px;
+      font-size: 2rem;
+      color: #FFD700;
     }
-
     p {
-      font-size: 1.2em;
-      max-width: 500px;
-      margin: 15px auto;
+      font-size: 1.2rem;
     }
-
-    .botones {
-      margin: 30px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      width: 80%;
-      max-width: 400px;
-    }
-
-    .botones a {
+    .button {
       display: block;
-      padding: 15px;
-      border-radius: 12px;
-      background-color: gold;
-      color: #2a0050;
+      width: 80%;
+      max-width: 300px;
+      margin: 1rem auto;
+      padding: 1rem;
+      font-size: 1.2rem;
+      background-color: #FFD700;
+      color: #37004b;
       text-decoration: none;
+      border-radius: 10px;
       font-weight: bold;
-      font-size: 1.1em;
-      transition: transform 0.2s ease;
     }
-
-    .botones a:hover {
-      transform: scale(1.05);
-    }
-
     footer {
-      margin-top: auto;
-      padding: 20px 10px;
-      font-size: 0.9em;
-      color: #ccc;
-    }
-
-    .verificado {
-      color: #00ff88;
-      margin-top: 5px;
-      font-size: 0.95em;
-    }
-
-    @media (min-width: 768px) {
-      h1 {
-        font-size: 2.5em;
-      }
+      margin-top: 2rem;
+      font-size: 0.8rem;
     }
   </style>
-
   <!-- Meta Pixel Code -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1043093627803279');
-    fbq('track', 'PageView');
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1043093627803279');
+  fbq('track', 'PageView');
   </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1043093627803279&ev=PageView&noscript=1"/>
-  </noscript>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1043093627803279&ev=PageView&noscript=1"
+  /></noscript>
   <!-- End Meta Pixel Code -->
-
 </head>
 <body>
+  <img src="logo.png" alt="Logo VegasBett" />
+  <h1>Bienvenido a VegasBett</h1>
+  <p>Obtené tu <strong>bono del 35%</strong> en tu primera carga.<br>¡Que la suerte esté de tu lado! 🎲✨</p>
 
-  <header>
-    <img src="logo.png" alt="VegasBett Logo" />
-  </header>
-
-  <main>
-    <h1>Bienvenido a VegasBett</h1>
-    <p>Obtené tu <strong>bono del 35%</strong> en tu primera carga.<br>¡Y que la suerte esté de tu lado! 🎲✨</p>
-
-    <div class="botones">
-      <a href="https://wa.me/5492235931148?text=Hola,%20quiero%20mi%20BONO" onclick="fbq('trackCustom', 'ClickBono')">
-        💰 Quiero mi bono
-      </a>
-      <a href="https://wa.me/5492235931148?text=Quiero%20más%20info" onclick="fbq('trackCustom', 'ClickInfo')">
-        ℹ️ Quiero más info
-      </a>
-      <a href="https://wa.me/5492233415879?text=Hola,%20ya%20hice%20mi%20carga%20y%20quiero%20activar%20mi%20bono.%20Te%20paso%20el%20comprobante%20y%20mi%20usuario:" style="background-color:#fff; color:#2a0050;">
-        ✅ Ya hice mi carga
-      </a>
-    </div>
-  </main>
+  <a class="button" href="https://wa.me/5492235931148?text=Hola,%20quiero%20mi%20BONO" onclick="registrarClick('ClickBono')">💰 Quiero mi bono</a>
+  <a class="button" href="https://wa.me/5492235931148?text=Quiero%20más%20info" onclick="registrarClick('ClickInfo')">ℹ️ Quiero más info</a>
+  <a class="button" href="https://wa.me/5492233415879?text=Cargá%20tus%20fichas%20fácil%20y%20rápido!%20Pasanos%20el%20comprobante%20🧾%20y%20tu%20nombre%20de%20usuario%20👤%20al%20siguiente%20número:%20📲%20+54%20223%20341%205879" onclick="registrarClick('YaCargue')">✅ Ya hice mi carga</a>
 
   <footer>
-    Todos los derechos reservados Spark Publicidad<br />
-    <div class="verificado">✅ Verificado por WhatsApp</div>
+    <p>Todos los derechos reservados Spark Publicidad</p>
+    <p>✅ Verificado por WhatsApp</p>
   </footer>
 
+  <script>
+    function registrarClick(boton) {
+      const ua = navigator.userAgent;
+      const origen = window.location.hostname;
+      const url = "https://script.google.com/macros/s/AKfycbzusjso6SkzyHIKOMwz7Q_ovb5e37ZlAm32FgM5lraF4wBsil_9vVhTCiNcoT8Vfw84/exec";
+      fetch(`${url}?boton=${boton}&ua=${encodeURIComponent(ua)}&origen=${origen}`);
+    }
+  </script>
 </body>
 </html>
