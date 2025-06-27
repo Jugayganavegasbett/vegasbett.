@@ -66,7 +66,7 @@
 
   <a class="button" href="https://wa.me/5492235931148?text=Hola,%20quiero%20mi%20BONO" onclick="registrarClick('ClickBono')">💰 Quiero mi bono</a>
   <a class="button" href="https://wa.me/5492235931148?text=Quiero%20más%20info" onclick="registrarClick('ClickInfo')">ℹ️ Quiero más info</a>
-  <a class="button" href="https://wa.me/5492233415879?text=Cargá%20tus%20fichas%20fácil%20y%20rápido!%20Pasanos%20el%20comprobante%20🧾%20y%20tu%20nombre%20de%20usuario%20👤%20al%20siguiente%20número:%20📲%20+54%20223%20341%205879" onclick="registrarClick('YaCargue')">✅ Ya hice mi carga</a>
+  <a class="button" href="https://wa.me/5492233415879?text=Cargá%20tus%20fichas%20fácil%20y%20rápido!%20Pasanos%20el%20comprobante%20🧾%20y%20tu%20nombre%20de%20usuario%20👤%20al%20siguiente%20número:%20📲%20+54%20223%20341%205879" onclick="registrarClick('YaCargue'); registrarCompra();">✅ Ya hice mi carga</a>
 
   <footer>
     <p>Todos los derechos reservados Spark Publicidad</p>
@@ -80,6 +80,14 @@
       const url = "https://script.google.com/macros/s/AKfycbzusjso6SkzyHIKOMwz7Q_ovb5e37ZlAm32FgM5lraF4wBsil_9vVhTCiNcoT8Vfw84/exec";
       fetch(`${url}?boton=${boton}&ua=${encodeURIComponent(ua)}&origen=${origen}`);
     }
+
+    function registrarCompra() {
+      fbq('track', 'Purchase', {
+        value: 100.00,
+        currency: 'USD'
+      });
+    }
   </script>
 </body>
 </html>
+
